@@ -1,2 +1,0 @@
-# tedxoxford
-TEDxOxford Repo
