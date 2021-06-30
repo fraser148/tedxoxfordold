@@ -1,0 +1,420 @@
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans'),
+  url(./../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('truetype');
+  font-weight: 100 800;
+}
+
+/** TABLE OF CONTENTS
+==============================
+1 — Global Styles
+1.1 — Colours
+1.2 — Colors
+2 — Layout
+2.1 — Navbar
+2.2 — Menu
+3 — Small Components
+3.1 — Events
+3.2 - Talks
+3.3 - Newsletter
+3.4 - Footer
+4 — Micro Components
+4.1 - Ted Title (Classic)
+5 — Admin Branding
+5.1 — Admin Bar
+5.2 — Builder Styles
+==============================
+
+
+
+================
+[1.1] Colours  #
+================
+**/
+
+$red: #E62B1E;
+$heading-blue: #0A2540;
+$header-weight: 600;
+$btnScaler: 1.06;
+$main-font: 'WorkSans';
+
+body {
+  font-family: $main-font;
+  margin:0;
+}
+
+.main-container {
+  display:block;
+  margin:auto;
+  width: 900px;
+  max-width:100%;
+}
+
+/**
+===============
+[2.1] NAVBAR  #
+===============
+**/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+
+  img {
+    height: 30px;
+  }
+  
+  a {
+    text-decoration: none;
+    margin: 0px 5px;
+    padding: 5px;
+    color: black;
+    font-weight: 300;
+    transition: ease-in-out 0.3s;
+    display: inline-block;
+  
+
+  }
+
+  .links a:hover {
+    $hover-up: -2px;
+    -moz-transform: translate(0, $hover-up);
+    -ms-transform: translate(0, $hover-up);
+    -o-transform: translate(0, $hover-up);
+    -webkit-transform: translate(0, $hover-up);
+    transform: translate(0, $hover-up);
+  }
+  
+  a.join-news {
+    background-color: $red;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 14px 6px 14px;
+  }
+}
+
+/**
+==============
+[2.2] INTRO  #
+==============
+**/
+
+.intro {
+  display:flex;
+  align-items: center;
+
+  // flex uses the proportions for "flex: grow shrink;" Set out of 12 but has no units
+
+  .content {
+    flex: 7 5;
+  }
+  .artwork {
+    flex: 5 7;
+  }
+
+  h1 {
+    color: $heading-blue;
+    font-size: 50px;
+    margin: 14px 0px;
+    font-weight: $header-weight;
+  }
+
+  p {
+    margin-bottom: 14px;
+    font-weight: 300;
+  }
+
+  img {
+    max-width:100%;
+    margin: 20px;
+
+  }
+}
+
+/**
+===============
+[3.1] EVENTS  #
+===============
+**/
+
+.event {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #999999;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin: 40px 0px 30px 0px;
+
+  .event-image, .event-content {
+    display: inline-block;
+    width:50%;
+    max-width: 50%;
+    margin: 10px 60px 50px 40px;
+  }
+
+  .event-content {
+    position: relative;
+  }
+
+  .date {
+    color: $red;
+    margin: 20px 0px 15px 0px;
+    font-size: 1em;
+  }
+
+  .title {
+    color: $heading-blue;
+    font-size:40px;
+    font-weight: 700;
+    margin: 5px 00px;
+  }
+
+  .details {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .location, .origin, .person {
+    margin:0;
+  }
+
+  .location {
+    font-weight: 600;
+  }
+
+  .origin, .person {
+    color: #666666;
+    font-weight: 300;
+  }
+
+  .person {
+    margin-bottom: 10px;
+  }
+
+  .find-more-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color:$red;
+    color:white;
+    padding: 8px 13px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    box-shadow: 0px 0px 3px #999999;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      transform: scale($btnScaler);
+      cursor: pointer;
+    }
+  }
+}
+
+/**
+==============
+[3.2] TALKS  #
+==============
+**/
+
+.talks {
+  display: block;
+  margin: 50px 100px;
+  text-align: center;
+  
+
+  .talks-list {
+    display: flex;
+    justify-content:space-between;
+  }
+  
+  .talk-container {
+    width: 33%;
+    padding:0px 20px;
+  }
+
+  .talk {
+    margin: 0px 00px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    box-shadow: inset 0 -30px 30px 0px rgba(0, 0, 0, 0.918);
+
+    .name, .title {
+      position: absolute;
+      left: 20px;
+      color: white;
+      font-size:24px;
+    }
+
+    .name {
+      font-weight: 200;
+      bottom:24px;
+    }
+
+    .title {
+      bottom: 00px;
+      font-weight:500;
+    }
+  }
+
+  .more {
+    display: inline-block;
+    text-align: center;
+    margin: 30px;
+    background-color: $red;
+    padding: 7px 18px;
+    border-radius: 30px;
+    color:white;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+
+    &:hover {
+      transform: scale($btnScaler)
+    }
+  }
+}
+
+/**
+===================
+[3.3] NEWSLETTER  #
+===================
+**/
+
+.newsletter {
+  display: block;
+  background-color: $red;
+  width: 100%;
+  color: white;
+  margin: 25px 0px;
+  padding-bottom: 40px;
+
+  .news-container {
+    width:800px;
+    max-width:100%;
+    display: block;
+    margin:auto;
+  }
+
+  .news-cont {
+    display: inline-block;
+    width:50%;
+    vertical-align:top;
+  }
+  
+  .news {
+    margin:0px 40px;
+  }
+
+  .newsletter-signup form > * {
+    width:100%;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .newsletter-content {
+    font-weight: 200;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .newsletter-signup {
+    $br: 5px;
+    input[type="email"], input[type="text"], select {
+      padding: 4px;
+      width:calc(100% - 40px);
+      font-family: $main-font;
+      font-size:16px;
+      border: none;
+      border-radius: $br;
+      border: 0.3px solid #66666698;
+      font-weight: 300;
+      margin: 3px 0px;
+
+      &:placeholder {
+        color: #666666;
+      }
+
+      
+    }
+    select {
+      width:calc(100% - 30px);
+    }
+    @mixin center($extend: true) {
+      @if $extend {
+          @extend %center;
+      } @else {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    
+    %center {
+        @include center($extend: false);
+    }
+    
+    input[type="submit"] {
+      background: none;
+      color: inherit;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      background-color: black;
+      padding: 6px 20px;
+      border-radius: $br;
+      width: calc(100% - 30px);
+      
+    }
+  }
+}
+
+/**
+===============
+[3.3] FOOTER  #
+===============
+**/
+
+.footer {
+  display: inline-block;
+}
+
+/**
+==================
+[4.1] TED TITLE  #
+==================
+**/
+
+.ted-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .first-word, .second-word {
+    display: inline-block;
+  }
+
+  .first-word h1, .second-word h1 {
+    font-size: 3em;
+  }
+
+  .first-word h1 {
+    font-weight: 200;
+  }
+
+  .second-word h1 {
+    font-weight: 800;
+  }
+}
