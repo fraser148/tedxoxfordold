@@ -4,6 +4,7 @@ import { BrowserRouter as Router,
   Route }             from 'react-router-dom';
 import Home           from './Home.js';
 import Speakers       from './Speakers.js';
+import TalksPage          from './TalksPage.js';
 import './App.scss';
 
 
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/speakers" component={Speakers}/>
+          <Route exact path="/talks" component={TalksPage}/>
         </Switch>
       </Router>
     )

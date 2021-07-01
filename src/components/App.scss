@@ -20,8 +20,8 @@
 3.4 - Footer
 4 — Micro Components
 4.1 - Ted Title (Classic)
-5 — Admin Branding
-5.1 — Admin Bar
+5 — Pages
+5.1 — Talks
 5.2 — Builder Styles
 ==============================
 
@@ -35,6 +35,7 @@
 $red: #E62B1E;
 $heading-blue: #0A2540;
 $header-weight: 600;
+$header-size: 50px;
 $btnScaler: 1.06;
 $main-font: 'WorkSans';
 
@@ -85,11 +86,13 @@ body {
     -o-transform: translate(0, $hover-up);
     -webkit-transform: translate(0, $hover-up);
     transform: translate(0, $hover-up);
+    color: black;
+    text-decoration: none;
   }
   
   a.join-news {
     background-color: $red;
-    border-radius: 15px;
+    border-radius: 30px;
     color: white;
     padding: 5px 14px 6px 14px;
   }
@@ -116,7 +119,7 @@ body {
 
   h1 {
     color: $heading-blue;
-    font-size: 50px;
+    font-size: $header-size;
     margin: 14px 0px;
     font-weight: $header-weight;
   }
@@ -331,7 +334,7 @@ body {
     $br: 5px;
     input[type="email"], input[type="text"], select {
       padding: 4px;
-      width:calc(100% - 40px);
+      width: 100%;;
       font-family: $main-font;
       font-size:16px;
       border: none;
@@ -347,7 +350,7 @@ body {
       
     }
     select {
-      width:calc(100% - 30px);
+      width: 100%;
     }
     @mixin center($extend: true) {
       @if $extend {
@@ -374,7 +377,7 @@ body {
       background-color: black;
       padding: 6px 20px;
       border-radius: $br;
-      width: calc(100% - 30px);
+      width: 100%;
       
     }
   }
@@ -416,5 +419,40 @@ body {
 
   .second-word h1 {
     font-weight: 800;
+  }
+}
+
+/**
+===================
+[5.1] TALKS PAGE  #
+===================
+**/
+
+.talks-page {
+  background-image: url("../images/background.png");
+  background-position: top;
+  background-size: cover;
+  height: 180vh;
+
+  .container-talks-top {
+    width: 100%;
+    margin:auto;
+    max-width:900px;
+    padding:0;
+  }
+
+  h1 {
+    color: $heading-blue;
+    font-weight: $header-weight;
+    font-size: $header-size;
+    margin: 16px 0px;
+  }
+
+  .heading {
+    margin-top: 70px;
+  }
+
+  p {
+    font-weight: 300;
   }
 }
