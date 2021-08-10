@@ -18,11 +18,12 @@
 3.2 - Talks
 3.3 - Newsletter
 3.4 - Footer
+3.5 - Profile
 4 — Micro Components
 4.1 - Ted Title (Classic)
 5 — Pages
 5.1 — Talks
-5.2 — Builder Styles
+5.2 - Committee
 ==============================
 
 
@@ -47,7 +48,7 @@ body {
 .main-container {
   display:block;
   margin:auto;
-  width: 900px;
+  width: 1100px;
   max-width:100%;
 }
 
@@ -75,8 +76,6 @@ body {
     font-weight: 300;
     transition: ease-in-out 0.3s;
     display: inline-block;
-  
-
   }
 
   .links a:hover {
@@ -95,6 +94,10 @@ body {
     border-radius: 30px;
     color: white;
     padding: 5px 14px 6px 14px;
+
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -105,17 +108,9 @@ body {
 **/
 
 .intro {
-  display:flex;
-  align-items: center;
-
-  // flex uses the proportions for "flex: grow shrink;" Set out of 12 but has no units
-
-  .content {
-    flex: 7 5;
-  }
-  .artwork {
-    flex: 5 7;
-  }
+  padding: 0px 30px;
+  width: 100%;
+  max-width:100%;
 
   h1 {
     color: $heading-blue;
@@ -142,6 +137,10 @@ body {
 ===============
 **/
 
+.eventHolder {
+  padding: 0px 30px;
+}
+
 .event {
   display: flex;
   border-radius: 10px;
@@ -150,6 +149,7 @@ body {
   background-repeat: no-repeat;
   background-position: left;
   margin: 40px 0px 30px 0px;
+
 
   .event-image, .event-content {
     display: inline-block;
@@ -385,12 +385,53 @@ body {
 
 /**
 ===============
-[3.3] FOOTER  #
+[3.4] FOOTER  #
 ===============
 **/
 
 .footer {
   display: inline-block;
+}
+
+/**
+================
+[3.5] PROFILE  #
+================
+**/
+
+.profile-holder {
+  margin-bottom: 20px;
+}
+.profile {
+
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    /*filter: grayscale(100%);*/
+    border-radius: 50px 0px 50px 0px;
+
+  }
+
+  span {
+    display: block;
+    text-align: left;
+  }
+
+  .name {
+    font-weight: 600;
+    padding-top:8px;
+    margin-bottom: -6px;
+    color: $red;
+  }
+
+  .role {
+    font-weight: 300;
+  }
+
 }
 
 /**
@@ -401,8 +442,8 @@ body {
 
 .ted-title {
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 30px 0px;
   text-align: center;
 
   .first-word, .second-word {
@@ -428,17 +469,20 @@ body {
 ===================
 **/
 
-.talks-page {
+.w-back {
   background-image: url("../images/background.png");
-  background-position: top;
+  background-position: 70% 0%;
   background-size: cover;
+}
+
+.talks-page {
   height: 180vh;
 
   .container-talks-top {
     width: 100%;
     margin:auto;
-    max-width:900px;
-    padding:0;
+    max-width:1100px;
+    padding:0px 30px;
   }
 
   h1 {
@@ -450,9 +494,93 @@ body {
 
   .heading {
     margin-top: 70px;
+    margin-bottom: 20vh;
   }
 
   p {
     font-weight: 300;
   }
 }
+
+.video-holder {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: stretch;
+
+  a {
+    text-decoration: none;
+  }
+
+  .video {
+    padding: 10px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      /*filter: grayscale(100%);*/
+      margin-bottom: 20px;
+    }
+
+    
+    span {
+      display: block;
+      text-align: left;
+      padding: 0px 10px;
+    }
+
+    .date {
+      text-transform: capitalize;
+      color: $red;
+      font-weight: 600;
+      font-size:14px;
+    }
+
+    .title {
+      font-weight: 300;
+      font-size:20px;
+      padding-top:8px;
+      margin-bottom: 10px;
+      line-height: normal;
+      color:black;
+    }
+
+    .speaker {
+      font-weight: 500;
+      color: $red;
+      margin-top: auto;
+    }
+
+    .description {
+      color:black;
+      font-size:14px;
+      font-weight: 300;
+    }
+  }
+}
+
+/**
+=======================
+[5.2] COMMITTEE PAGE  #
+=======================
+**/
+
+
+.committee-holder {
+  width: 100%;
+  margin:auto;
+  max-width:1100px;
+  padding:0px 30px;
+}
+
+.committee {
+  padding:0;
+
+  h1 {
+    color: $heading-blue;
+    font-weight: $header-weight;
+    font-size: $header-size;
+    margin: 16px 0px;
+  }
+}
+

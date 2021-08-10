@@ -8,7 +8,8 @@ class Event extends React.Component {
 
     render() {
       return (
-        <div className="event" style={{ backgroundImage: `url(${this.props.image})` }}>
+        <div className="eventHolder">
+          <div className="event" style={{ backgroundImage: `url(${this.props.image})` }}>
             <div class="event-image"></div>
             <div className="event-content">
               <h3 className="date">{this.props.date}</h3>
@@ -19,6 +20,7 @@ class Event extends React.Component {
               <p className="person">{this.props.person}</p>
               <span className="find-more-btn">Find out more</span>
             </div>
+          </div>
         </div>
       );
     }
