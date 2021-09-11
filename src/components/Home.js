@@ -1,6 +1,5 @@
 import React        from 'react';
 import Header       from './Header.js';
-import artwork      from './../images/artwork-100.jpg';
 import Event        from './Event.js';
 import eventimg     from './../images/person.png';
 import Talks        from './Talks.js';
@@ -28,7 +27,7 @@ const Intro = () => {
           </p>
         </Col>
         <Col sm={12} md={5} className="artwork">
-          <img src={artwork} alt='Filler artwork'/>
+          <img src={"./logo-final.png"} alt='Filler artwork'/>
         </Col>
       </Row>
 

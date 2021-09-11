@@ -41,7 +41,7 @@ class Talks extends React.Component {
                     </div>
                 </div>
             </div>
-            <Link className='more' to='/talks'>VIEW MORE TALKS</Link>
+            <Link className='more' to='/'>VIEW MORE TALKS</Link>
         </div>
         
       );

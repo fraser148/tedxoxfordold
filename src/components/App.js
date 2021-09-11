@@ -6,6 +6,8 @@ import Home               from './Home.js';
 import Speakers           from './Speakers.js';
 import TalksPage          from './TalksPage.js';
 import Committee          from './Committee.js';
+import About              from './About.js';
+import Sponsors           from './Sponsors.js';
 import './App.scss';
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-201249248-1', {
@@ -22,6 +24,8 @@ class App extends React.Component {
           <Route exact path="/speakers" component={Speakers}/>
           <Route exact path="/talks" component={TalksPage}/>
           <Route exact path="/committee" component={Committee}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/sponsors" component={Sponsors}/>
         </Switch>
       </Router>
     )

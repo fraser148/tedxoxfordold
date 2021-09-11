@@ -1,7 +1,6 @@
 import React        from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { Link }     from 'react-router-dom';
-
+import TEDtitle     from './TEDtitle.js';
 
 class Talks extends React.Component {
     constructor(props) {
@@ -12,10 +11,14 @@ class Talks extends React.Component {
     render() {
       return (
         <div className="footer">
+          <TEDtitle first={"FOLLOW"} second={"US"}/>
             <div className="widget socials">
-                <SocialIcon url="https://www.facebook.com/TEDxOxford" />
+                <SocialIcon className="social-icon" url="https://www.facebook.com/TEDxOxford" />
+                <SocialIcon className="social-icon" url="https://www.instagram.com/tedxoxford/" />
             </div>
-            <Link className='more' to='/donate'>Donate</Link>
+            <div className="footer-license">
+              <span>This independent TEDx event is operated under license from TED</span>
+            </div>
         </div>
         
       );

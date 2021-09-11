@@ -12,7 +12,7 @@ class TalksPage extends React.Component {
 
     async componentDidMount() {
         try {
-          let res = await fetch("/getVideos", {
+          const res = await fetch("https://www.api.tedxoxford.co.uk/getVideos", {
             method: "POST",
             headers: {
               "Accept": "application/json",
@@ -20,7 +20,7 @@ class TalksPage extends React.Component {
             },
           })
     
-          let result = await res.json();
+          const result = await res.json();
     
           if (result && result.success) {
             this.setState({

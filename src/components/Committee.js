@@ -15,7 +15,7 @@ class Committee extends React.Component {
 
     async componentDidMount() {
         try {
-          let res = await fetch("/getProfiles", {
+          let res = await fetch("https://www.api.tedxoxford.co.uk/getProfiles", {
             method: "POST",
             headers: {
               "Accept": "application/json",
